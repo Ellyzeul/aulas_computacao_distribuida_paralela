@@ -1,2 +1,3 @@
-# aulas_computacao_distribuida_paralela
-Anotações e exemplos de código da disciplina de Computação Distribuída e Paralela
+# Computação Distribuída e Paralela
+
+Anotações e exemplos das aulas de Computação Distribuída e Paralela

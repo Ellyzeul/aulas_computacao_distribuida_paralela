@@ -14,8 +14,13 @@ public class Server{
  			while(true){
  				DatagramPacket request = new DatagramPacket(buffer, buffer.length);
   				aSocket.receive(request); 
-    			DatagramPacket reply = new DatagramPacket(request.getData(), request.getLength(), 
-    				request.getAddress(), request.getPort());
+    			DatagramPacket reply = new DatagramPacket(
+					request.getData(), 
+					request.getLength(), 
+    				request.getAddress(), 
+					request.getPort()
+				);
+				System.out.println("Conexao recebida de cliente UDP");
     			aSocket.send(reply);
     		}
 		}catch (SocketException e){System.out.println("Socket: " + e.getMessage());

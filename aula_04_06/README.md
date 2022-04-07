@@ -1,4 +1,4 @@
-# Aula dia 04/04/2022
+# Aula dia 06/04/2022
 
 ## Tópicos
 - Introdução a sistemas distribuídos

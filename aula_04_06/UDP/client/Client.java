@@ -8,6 +8,7 @@ public class Client {
     public static void main(String args[]){ 
 		// args give message contents and destination hostname
 		DatagramSocket aSocket = null;
+
 		try {
 			aSocket = new DatagramSocket();    
 			byte [] m = args[0].getBytes();
@@ -20,8 +21,15 @@ public class Client {
 			DatagramPacket reply = new DatagramPacket(buffer, buffer.length);	
 			aSocket.receive(reply);
 			System.out.println("Reply: " + new String(reply.getData()));	
-		}catch (SocketException e){System.out.println("Socket: " + e.getMessage());
-		}catch (IOException e){System.out.println("IO: " + e.getMessage());
-		}finally {if(aSocket != null) aSocket.close();}
+		}
+		catch(SocketException e) {
+			System.out.println("Socket: " + e.getMessage());
+		}
+		catch(IOException e) {
+			System.out.println("IO: " + e.getMessage());
+		}
+		finally {
+			if(aSocket != null) aSocket.close();
+		}
 	}	
 }

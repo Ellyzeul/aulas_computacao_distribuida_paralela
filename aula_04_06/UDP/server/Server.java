@@ -23,8 +23,16 @@ public class Server{
 				System.out.println("Conexao recebida de cliente UDP");
     			aSocket.send(reply);
     		}
-		}catch (SocketException e){System.out.println("Socket: " + e.getMessage());
-		}catch (IOException e) {System.out.println("IO: " + e.getMessage());
-		}finally {if(aSocket != null) aSocket.close();}
+		}
+		catch(SocketException e)
+		{
+			System.out.println("Socket: " + e.getMessage());
+		}
+		catch(IOException e) {
+			System.out.println("IO: " + e.getMessage());
+		}
+		finally {
+			if(aSocket != null) aSocket.close();
+		}
     }
 }

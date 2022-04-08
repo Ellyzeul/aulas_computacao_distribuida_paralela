@@ -3,7 +3,7 @@ package aula_04_06.TCP.server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import aula_04_06.TCP.server.Connection;
+
 
 class Server {
     public static void main (String args[]) {
@@ -15,6 +15,9 @@ class Server {
 				System.out.println("Conexao recebida de cliente TCP");
 				Connection c = new Connection(clientSocket);
 			}
-		} catch(IOException e) {System.out.println("Listen socket:"+e.getMessage());}
+		} 
+		catch(IOException e) {
+			System.out.println("Listen socket:"+e.getMessage());
+		}
 	}
 }
